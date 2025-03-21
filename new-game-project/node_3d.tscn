@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c27lap86iwros"]
+
+[ext_resource type="Script" path="res://NewScript.cs" id="1_d7x8t"]
+[ext_resource type="Texture2D" uid="uid://btt5qnifahpdt" path="res://icon.svg" id="2_uxovd"]
+
+[node name="root" type="Node3D"]
+transform = Transform3D(-0.74353, 0, 0.668702, 0, 1, 0, -0.668702, 0, -0.74353, 0, 0, 0)
+script = ExtResource("1_d7x8t")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(70, 71)
+texture = ExtResource("2_uxovd")
+
+[node name="Node3D" type="Node3D" parent="."]
