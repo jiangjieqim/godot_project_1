@@ -1,0 +1,54 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "Godot_v4.3-stable_mono_win64.exe",
+            "type": "process",
+            "args": [
+                "--build-solutions",
+                "--path",
+                "${workspaceRoot}",
+                "--no-window",
+                "-q"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/New Game Project.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/New Game Project.sln"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "chrome ${file}",
+            "type": "shell",
+            "command":"cd ../../../../github/jjqmdlib/cmd & call opendoc ${file}",
+            "problemMatcher": []
+        },
+        {
+            "label": "commit ${file}",
+            "type": "shell",
+            "command": "TortoiseGitProc.exe /command:commit /path:${file} /closeonend:0 /logmsg:.",
+            "problemMatcher": []
+        },
+    ]
+}
