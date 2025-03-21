@@ -43,7 +43,7 @@
             "address": "localhost",
             "port": 23685
         },
-        //#region NetLaunch
+        //#region coreclr
         {
             "name": ".NET Core Launch (console)",
             // "type": "coreclr",

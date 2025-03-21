@@ -1,6 +1,7 @@
 {
     "version": "2.0.0",
     "tasks": [
+        //#region build
         {
             "label": "build",
             "command": "Godot_v4.3-stable_mono_win64.exe",
@@ -14,6 +15,7 @@
             ],
             "problemMatcher": "$msCompile"
         },
+        //#endregion
         {
             "label": "publish",
             "command": "dotnet",
@@ -48,6 +50,12 @@
             "label": "commit ${file}",
             "type": "shell",
             "command": "TortoiseGitProc.exe /command:commit /path:${file} /closeonend:0 /logmsg:.",
+            "problemMatcher": []
+        },
+        {
+            "label": "commit all",
+            "type": "shell",
+            "command": "TortoiseGitProc.exe /command:commit /path:%cd% /closeonend:0 /logmsg:.",
             "problemMatcher": []
         },
     ]
